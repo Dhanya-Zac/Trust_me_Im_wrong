@@ -9,7 +9,8 @@ from dotenv import load_dotenv
 from semantic_uncertainty.semantic_uncertainty.uncertainty.models.base_model import BaseModel, STOP_SEQUENCES
 
 # Load environment variables
-load_dotenv()
+main_dir = os.path.expanduser("~/Trust_me_Im_wrong")
+load_dotenv(os.path.join(main_dir, ".env"))
 
 
 class APIModel(BaseModel):
