@@ -71,7 +71,7 @@ class KnowledgeDataset():
             data.append([prompt, old_target, old_token])
 
         # randomly select 100k examples
-        data = random.sample(data, min(70000, len(data)))
+        data = random.sample(data, min(100, len(data)))
         print(f"finished creating initial dataset for trivia qa with {len(data)} examples")
         return data
 
@@ -126,7 +126,7 @@ class KnowledgeDataset():
                 data.append([prompt, old_target, old_token])
 
             # randomly select 100k examples
-            data = random.sample(data, min(70000, len(data)))
+            data = random.sample(data, min(100, len(data)))
             print(f"finished creating initial dataset for trivia qa with {len(data)} examples")
         return data
 
